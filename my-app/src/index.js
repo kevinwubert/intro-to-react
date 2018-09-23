@@ -15,7 +15,7 @@ class Board extends React.Component {
     return (
       <Square
         value={this.props.squares[i]}
-        onClick={() => this.props.handleClick(i)}
+        onClick={() => this.props.onClick(i)}
       />
     );
   }
@@ -86,7 +86,7 @@ class Game extends React.Component {
       <div className="game">
         <div className="game-board">
           <Board 
-            square={current.squares}
+            squares={current.squares}
             onClick={(i) => this.handleClick(i)}
           />
         </div>
